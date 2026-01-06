@@ -3,18 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Fast, affordable junk removal with upfront pricing. Same-day pickups available. Call or text for a quote." />
-  <meta name="keywords" content="junk removal, hauling, trash removal, furniture removal, appliance removal, yard debris, estate cleanout" />
-  <meta name="theme-color" content="#0a0f1c" />
-  <title>City Junk Removal | Same-Day Hauling & Cleanouts</title>
-
-<link rel="stylesheet" href="styles.css">
-
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="City Junk Removal | Same-Day Hauling & Cleanouts" />
-  <meta property="og:description" content="Upfront pricing. Friendly crews. Fast pickups. Call or text for a quote." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Friendly, upfront junk removal with real results. Same-day pickups available. Call or text for a quote." />
+  <title>City Junk Removal | Friendly, Upfront Hauling</title>
 
   <!-- Local Business Schema (edit placeholders) -->
   <script type="application/ld+json">
@@ -22,7 +12,6 @@
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
     "name":"City Junk Removal",
-    "image":"https://example.com/og-image.jpg",
     "telephone":"+1-555-555-5555",
     "priceRange":"$$",
     "address":{
@@ -41,75 +30,79 @@
 </head>
 
 <body>
-  <!-- Top Nav -->
-  <div class="topbar">
+  <!-- Topbar -->
+  <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#top">
-        <div class="logo" aria-hidden="true"></div>
+      <a class="brand" href="#top" aria-label="Go to top">
+        <div class="mark" aria-hidden="true"></div>
         <div>
           <div class="brand-title">City Junk Removal</div>
-          <div class="brand-sub">Same-day hauling & cleanouts</div>
+          <div class="brand-sub">Local • Licensed & insured • Upfront pricing</div>
         </div>
       </a>
 
-      <div class="nav">
+      <nav class="nav">
         <a href="#services">Services</a>
-        <a href="#how">How it works</a>
+        <a href="#results">Results</a>
         <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-      </div>
+        <a href="#quote">Quote</a>
+      </nav>
 
-      <div class="nav-actions">
-        <a class="btn primary" href="tel:+15555555555">Call: (555) 555-5555</a>
+      <div class="actions">
+        <a class="btn ghost" href="tel:+15555555555">Call (555) 555-5555</a>
         <a class="btn solid" href="#quote">Get a Quote</a>
       </div>
     </div>
-  </div>
+  </header>
 
   <!-- Hero -->
   <main id="top" class="hero">
     <div class="wrap hero-grid">
-      <div>
-        <span class="pill">✅ Upfront pricing • ✅ Friendly crews • ✅ Fast pickups</span>
-
-        <h1 class="h1">
-          Junk removal that’s
-          <span class="gradient-text">actually</span>
-          stress-free.
-        </h1>
-
+      <div class="hero-copy">
+        <p class="kicker">Junk removal that feels… normal.</p>
+        <h1>We show up on time, give upfront pricing, and leave your place clean.</h1>
         <p class="sub">
-          Furniture, appliances, yard debris, garage cleanouts, and move-out junk — we haul it, load it,
-          and dispose/donate responsibly. Same-day and next-day slots available.
+          Furniture, appliances, garage cleanouts, move-outs, yard debris — we haul it away and dispose responsibly.
+          Same-day and next-day availability.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn solid" href="tel:+15555555555">📞 Call Now</a>
-          <a class="btn primary" href="sms:+15555555555?&body=Hi!%20I%27d%20like%20a%20junk%20removal%20quote.%20My%20address%20is%20____%20and%20the%20items%20are%20____.">💬 Text for Quote</a>
-          <a class="btn" href="#services">See Services</a>
+        <div class="hero-cta">
+          <a class="btn solid" href="tel:+15555555555">Call now</a>
+          <a class="btn ghost" href="sms:+15555555555?&body=Hi!%20I%27d%20like%20a%20junk%20removal%20quote.%20My%20address%20is%20____%20and%20the%20items%20are%20____.">Text for a quote</a>
         </div>
 
-        <div class="trust">
-          <span>⭐ 5-star service</span>
-          <span>🕒 8am–8pm</span>
-          <span>🧾 Licensed & insured</span>
-          <span>♻️ Donate / recycle when possible</span>
+        <div class="trust-row" role="list" aria-label="Trust signals">
+          <div class="trust" role="listitem">
+            <span class="icon" aria-hidden="true">✓</span>
+            <span>Upfront pricing</span>
+          </div>
+          <div class="trust" role="listitem">
+            <span class="icon" aria-hidden="true">✓</span>
+            <span>Friendly crew</span>
+          </div>
+          <div class="trust" role="listitem">
+            <span class="icon" aria-hidden="true">✓</span>
+            <span>Donate/recycle when possible</span>
+          </div>
         </div>
       </div>
 
       <!-- Quote Card -->
-      <div id="quote" class="card quote">
-        <div class="quote-head">
-          <h3>Get a fast estimate</h3>
-          <span class="badge">Usually replies in ~10 minutes</span>
+      <aside class="card" id="quote">
+        <div class="card-head">
+          <div>
+            <h2 class="card-title">Fast estimate</h2>
+            <p class="card-sub">Send items + address. We’ll confirm pricing before loading.</p>
+          </div>
+          <div class="chip">Replies fast</div>
         </div>
 
-        <!-- mailto by default — replace later with Formspree/Web3Forms/etc -->
-        <form id="quoteForm" action="mailto:youremail@yourdomain.com" method="post" enctype="text/plain">
+        <!-- mailto placeholder — swap for Formspree/Web3Forms later -->
+        <form class="form" id="quoteForm" action="mailto:youremail@yourdomain.com" method="post" enctype="text/plain">
           <div class="grid2">
             <div>
               <label for="name">Name</label>
-              <input id="name" name="Name" placeholder="Emily" required />
+              <input id="name" name="Name" placeholder="Your name" required />
             </div>
             <div>
               <label for="phone">Phone</label>
@@ -117,14 +110,14 @@
             </div>
           </div>
 
-          <div class="mt10">
-            <label for="address">Service Address</label>
+          <div class="mt12">
+            <label for="address">Service address</label>
             <input id="address" name="Address" placeholder="Street, City" required />
           </div>
 
-          <div class="grid2 mt10">
+          <div class="grid2 mt12">
             <div>
-              <label for="service">Service Type</label>
+              <label for="service">Service</label>
               <select id="service" name="Service">
                 <option>Junk Removal</option>
                 <option>Garage Cleanout</option>
@@ -135,7 +128,7 @@
               </select>
             </div>
             <div>
-              <label for="time">Preferred Time</label>
+              <label for="time">Preferred time</label>
               <select id="time" name="Preferred Time">
                 <option>ASAP</option>
                 <option>Today (if available)</option>
@@ -145,60 +138,138 @@
             </div>
           </div>
 
-          <div class="mt10">
+          <div class="mt12">
             <label for="details">What needs hauled?</label>
-            <textarea id="details" name="Details" placeholder="Example: couch + mattress + 6 trash bags + small dresser. 1 flight of stairs."></textarea>
+            <textarea id="details" name="Details" placeholder="Example: couch + mattress + 8 bags. One flight of stairs."></textarea>
           </div>
 
           <div class="form-actions">
-            <button class="btn solid" type="submit">Send Quote Request</button>
-            <button class="btn primary" type="button" id="textQuoteBtn">Text This Info</button>
+            <button class="btn solid" type="submit">Send request</button>
+            <button class="btn ghost" type="button" id="textQuoteBtn">Text these details</button>
           </div>
 
-          <p class="fine">Tip: For the fastest quote, text us photos of the items.</p>
+          <p class="fine">Tip: Texting photos gets the fastest quote.</p>
         </form>
-      </div>
+      </aside>
     </div>
   </main>
 
   <!-- Services -->
   <section id="services" class="section">
     <div class="wrap">
-      <h2>What we haul</h2>
-      <p>From “one couch” to “my garage became a storage unit and now I’m scared” — we’ve got you.</p>
+      <div class="section-head">
+        <h2>What we haul</h2>
+        <p>Simple menu. No weird upsells. Just clean, quick removal.</p>
+      </div>
 
-      <div class="tiles">
-        <div class="tile"><b>Furniture Removal</b><span class="muted">Couches, dressers, bed frames, tables, chairs.</span></div>
-        <div class="tile"><b>Appliance Removal</b><span class="muted">Fridges, washers, dryers, microwaves (fees may apply).</span></div>
-        <div class="tile"><b>Garage + Shed Cleanouts</b><span class="muted">Boxes, scrap, old tools, random “I’ll use it someday” piles.</span></div>
-        <div class="tile"><b>Move-Out Junk</b><span class="muted">Fast pickups for renters, landlords, and property managers.</span></div>
-        <div class="tile"><b>Yard Debris</b><span class="muted">Branches, leaves, fence panels, storm cleanup.</span></div>
-        <div class="tile"><b>Commercial Pickups</b><span class="muted">Offices, retail, storage units, light demo debris.</span></div>
+      <div class="cards">
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">🛋️</div>
+          <h3>Furniture</h3>
+          <p>Couches, beds, dressers, tables, chairs.</p>
+        </article>
+
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">🧺</div>
+          <h3>Appliances</h3>
+          <p>Washers, dryers, fridges (fees may apply).</p>
+        </article>
+
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">📦</div>
+          <h3>Garage & shed</h3>
+          <p>Boxes, clutter, old storage piles.</p>
+        </article>
+
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">🚪</div>
+          <h3>Move-outs</h3>
+          <p>Fast pickups for renters + landlords.</p>
+        </article>
+
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">🌿</div>
+          <h3>Yard debris</h3>
+          <p>Branches, leaves, fence panels, storm cleanup.</p>
+        </article>
+
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">🏢</div>
+          <h3>Commercial</h3>
+          <p>Offices, retail, storage units, light demo.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- How it works -->
-  <section id="how" class="section">
+  <!-- Results -->
+  <section id="results" class="section soft">
     <div class="wrap">
-      <h2>How it works</h2>
-      <p>Simple, because your life has enough chaos already.</p>
+      <div class="section-head">
+        <h2>Real results</h2>
+        <p>Here’s what “before and after” looks like when you just want your space back.</p>
+      </div>
 
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <b>Call / text for a quote</b>
-          <p>Send item list or photos. We confirm price upfront.</p>
+      <div class="results-grid">
+        <!-- Before/After Slider -->
+        <div class="card slider-card">
+          <div class="slider-head">
+            <h3>Garage cleanout</h3>
+            <p class="muted">Drag the handle left/right</p>
+          </div>
+
+          <!-- Replace the image URLs with your actual before/after -->
+          <div class="ba" data-ba>
+            <img class="ba-img" src="https://images.unsplash.com/photo-1581578017424-2a0bcd7b23f8?auto=format&fit=crop&w=1400&q=70" alt="After: clean garage space" />
+            <div class="ba-before" data-ba-before>
+              <img class="ba-img" src="https://images.unsplash.com/photo-1527515637462-daf58d0d36b2?auto=format&fit=crop&w=1400&q=70" alt="Before: cluttered garage space" />
+            </div>
+            <div class="ba-handle" data-ba-handle role="slider" aria-label="Before after slider"
+                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
+          </div>
+
+          <div class="slider-foot">
+            <div><b>Time:</b> 1.5 hours</div>
+            <div><b>Load:</b> ~½ truck</div>
+            <div><b>Result:</b> usable space again</div>
+          </div>
         </div>
-        <div class="step">
-          <div class="num">2</div>
-          <b>We show up on time</b>
-          <p>Friendly crew, quick load-out, no drama.</p>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <b>We haul + dispose responsibly</b>
-          <p>Donate/recycle when possible, landfill when needed.</p>
+
+        <!-- Testimonials -->
+        <div class="card">
+          <div class="testis">
+            <div class="testi">
+              <p class="quote">“They showed up when they said they would, quoted the price, and were done fast. No mess left behind.”</p>
+              <div class="who">
+                <b>Jamie R.</b>
+                <span class="muted">Move-out pickup</span>
+              </div>
+            </div>
+
+            <div class="testi">
+              <p class="quote">“I expected this to be a whole ordeal. It wasn’t. Super respectful crew.”</p>
+              <div class="who">
+                <b>Chris M.</b>
+                <span class="muted">Garage cleanout</span>
+              </div>
+            </div>
+
+            <div class="testi">
+              <p class="quote">“Upfront pricing, no weird pressure, and they donated what they could. Would book again.”</p>
+              <div class="who">
+                <b>Alex S.</b>
+                <span class="muted">Furniture haul</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-cta">
+            <div>
+              <b>Want this to feel extra personal?</b>
+              <p class="muted">Add 6–10 real reviews + your own “About us” story and this becomes instantly credible.</p>
+            </div>
+            <a class="btn ghost" href="#quote">Get my quote</a>
+          </div>
         </div>
       </div>
     </div>
@@ -207,135 +278,79 @@
   <!-- Pricing -->
   <section id="pricing" class="section">
     <div class="wrap">
-      <h2>Upfront pricing</h2>
-      <p>Most jobs are priced by volume (how much space your items take in our truck). We’ll confirm the final price before we load anything.</p>
+      <div class="section-head">
+        <h2>Upfront pricing</h2>
+        <p>Most jobs are priced by volume. We confirm your total before we load anything.</p>
+      </div>
 
       <div class="pricing">
-        <div class="price">
-          <h3>Small Load</h3>
+        <div class="price card">
+          <h3>Small load</h3>
           <div class="amt">$149–$249</div>
-          <div class="muted strong">¼ truck (approx.)</div>
+          <p class="muted">A few items / bags</p>
           <ul>
-            <li>Few items or bags</li>
-            <li>Great for quick pickups</li>
-            <li>Most “one room” jobs</li>
+            <li>1–2 furniture pieces</li>
+            <li>Small pickup</li>
+            <li>Great for quick jobs</li>
           </ul>
         </div>
 
-        <div class="price highlight">
-          <h3>Medium Load</h3>
+        <div class="price card featured">
+          <div class="chip">Most common</div>
+          <h3>Medium load</h3>
           <div class="amt">$299–$449</div>
-          <div class="muted strong">½ truck (approx.)</div>
+          <p class="muted">~½ truck</p>
           <ul>
             <li>Garage corner cleanout</li>
-            <li>Multiple furniture pieces</li>
-            <li>Fast move-out junk</li>
+            <li>Multiple items</li>
+            <li>Move-out piles</li>
           </ul>
         </div>
 
-        <div class="price">
-          <h3>Full Load</h3>
+        <div class="price card">
+          <h3>Full load</h3>
           <div class="amt">$549–$799</div>
-          <div class="muted strong">Full truck (approx.)</div>
+          <p class="muted">Full truck</p>
           <ul>
             <li>Big cleanouts</li>
             <li>Storage units</li>
-            <li>Estate / eviction jobs</li>
+            <li>Estate / eviction</li>
           </ul>
         </div>
       </div>
 
-      <p class="fine mt10">
-        Note: Heavy items (appliances, construction debris, etc.) may have additional disposal fees depending on local rules.
+      <p class="fine">
+        Heavy items / special disposal (appliances, construction debris, etc.) may include additional dump fees depending on your city.
       </p>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="section">
-    <div class="wrap">
-      <h2>FAQ</h2>
-
-      <div class="faq">
-        <details>
-          <summary>Do you offer same-day service?</summary>
-          <p>Yep — if we have availability. Texting photos usually gets you the fastest slot.</p>
-        </details>
-
-        <details>
-          <summary>How do you price jobs?</summary>
-          <p>Mostly by volume (how much truck space). We confirm the total before we start loading.</p>
-        </details>
-
-        <details>
-          <summary>Do I need to move anything outside first?</summary>
-          <p>Nope. We do the lifting. If you want to stage items for speed, cool — but not required.</p>
-        </details>
-
-        <details>
-          <summary>What items can’t you take?</summary>
-          <p>Hazardous materials (paint, chemicals), some batteries, and certain medical waste. Ask us and we’ll guide you.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section">
-    <div class="wrap card cta">
+  <!-- Footer CTA -->
+  <section class="section soft">
+    <div class="wrap footer-cta card">
       <div>
-        <b>Ready to get your space back?</b>
-        <div class="muted strong">Call or text now — we’ll confirm pricing upfront.</div>
+        <h2 class="tight">Ready to get your space back?</h2>
+        <p class="muted">Call or text — we’ll confirm pricing upfront and schedule the fastest available slot.</p>
       </div>
-      <div class="cta-actions">
-        <a class="btn solid" href="tel:+15555555555">📞 Call Now</a>
-        <a class="btn primary" href="sms:+15555555555?&body=Hi!%20I%27d%20like%20a%20junk%20removal%20quote.%20My%20address%20is%20____%20and%20the%20items%20are%20____.">💬 Text for Quote</a>
+      <div class="footer-cta-actions">
+        <a class="btn solid" href="tel:+15555555555">Call now</a>
+        <a class="btn ghost" href="sms:+15555555555?&body=Hi!%20I%27d%20like%20a%20junk%20removal%20quote.%20My%20address%20is%20____%20and%20the%20items%20are%20____.">Text for a quote</a>
       </div>
     </div>
   </section>
 
-  <footer>
+  <footer class="footer">
     <div class="wrap footer-inner">
       <div>© <span id="year"></span> City Junk Removal • Licensed & insured</div>
-      <div><a href="#top" class="backtop">Back to top ↑</a></div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#top">Top</a>
+      </div>
     </div>
   </footer>
-
-  <!-- Mobile Sticky Call -->
-  <div class="sticky-call">
-    <a class="btn solid" href="tel:+15555555555">Call Now</a>
-  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-<script>
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Text quote button builds an SMS using the form values
-const textBtn = document.getElementById("textQuoteBtn");
-
-textBtn.addEventListener("click", () => {
-  const name = document.getElementById("name").value || "";
-  const phone = document.getElementById("phone").value || "";
-  const address = document.getElementById("address").value || "";
-  const service = document.getElementById("service").value || "";
-  const time = document.getElementById("time").value || "";
-  const details = document.getElementById("details").value || "";
-
-  const msg =
-    `Quote request:%0A` +
-    `Name: ${encodeURIComponent(name)}%0A` +
-    `Phone: ${encodeURIComponent(phone)}%0A` +
-    `Address: ${encodeURIComponent(address)}%0A` +
-    `Service: ${encodeURIComponent(service)}%0A` +
-    `Preferred time: ${encodeURIComponent(time)}%0A` +
-    `Details: ${encodeURIComponent(details)}`;
-
-  // Replace phone number with your real business phone
-  window.location.href = `sms:+15555555555?&body=${msg}`;
-});
-</script>
