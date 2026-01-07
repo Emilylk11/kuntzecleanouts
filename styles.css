@@ -172,7 +172,7 @@ body{
   border-radius: 999px;
   color: var(--muted);
   font-weight:800;
-  font-size:13px;        /* smaller + cleaner */
+  font-size:10px;        /* smaller + cleaner */
   line-height:1.2;
 }
 .icon{
