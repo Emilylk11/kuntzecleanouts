@@ -383,3 +383,17 @@ html{
 section{
   scroll-margin-top: 90px;
 }
+.mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #dff5e1, #e9f0ff);
+  display: grid;
+  place-items: center;
+}
+
+.mark-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
