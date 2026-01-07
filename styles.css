@@ -27,29 +27,56 @@ a{color:inherit}
 .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
 
 /* Topbar */
-/* Sticky top nav */
+/* Topbar (fixed + clean) */
+:root { --topbar-h: 76px; } /* adjust if needed */
+
 .topbar{
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 0; left: 0; right: 0;
   z-index: 9999;
-  background: rgba(255,255,255,.9); /* adjust if your bg isn't white */
+  background: rgba(255,255,255,.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
+
 .topbar-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0; gap:12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 0;
+  min-height: var(--topbar-h);
 }
+
+body{
+  padding-top: var(--topbar-h);
+}
+
+/* Brand + logo badge */
 .brand{
-  display:flex; align-items:center; gap:10px;
+  display:flex;
+  align-items:center;
+  gap:12px;
   text-decoration:none;
 }
+
 .mark{
-  background-image: url("/kuntzecleanouts/assets/pfplogo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  background: linear-gradient(135deg, #dff5e1, #e9f0ff);
+}
+
+.mark img{
+  width:100%;
+  height:100%;
+  object-fit: cover; /* use 'contain' if you don't want cropping */
+  display:block;
 }
 
 .brand-title{font-weight:900; letter-spacing:-.2px}
@@ -382,62 +409,9 @@ html{
 section{
   scroll-margin-top: 90px;
 }
-.mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #dff5e1, #e9f0ff);
-  display: grid;
-  place-items: center;
-}
-
 .mark-logo {
   width: 26px;
   height: 26px;
   object-fit: contain;
 }
-.topbar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  background: rgba(255,255,255,.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-}
 
-/* Push page content down so it doesn't hide under the fixed header */
-body{
-  padding-top: 90px; /* match your header height */
-}
-.topbar {
-  position: sticky; /* or fixed */
-  top: 0;
-  z-index: 9999;
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(10px);
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  position: relative; /* 👈 critical */
-}
-
-.mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #dff5e1, #e9f0ff);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-}
-
-.mark img {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-}
