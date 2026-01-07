@@ -95,23 +95,43 @@ body{
 .actions{display:flex; gap:10px; align-items:center}
 
 /* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;          /* ← same spacing as before */
+  border-radius:14px;         /* ← same rounded corners */
+  font-weight:900;
+  text-decoration:none;
+  border:1px solid var(--border);
+  white-space:nowrap;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border .12s ease;
+}
+
 .btn.solid{
   background: linear-gradient(135deg, var(--brand), #ff8a2a);
   color:#fff;
   border-color: transparent;
 }
 
-.btn:hover{transform: translateY(-1px); box-shadow: var(--shadow); filter: brightness(.98);}
-.btn.solid{
-  background: linear-gradient(135deg, rgba(37,99,235,1), rgba(34,197,94,.95));
-  color:#fff;
-  border-color: transparent;
+.btn.solid:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  filter: brightness(.97);
 }
+
+.btn:hover{transform: translateY(-1px); box-shadow: var(--shadow); filter: brightness(.98);}
+
 .btn.ghost{
   background:#fff;
   color: var(--text);
+  border-color: var(--border);
 }
-.btn.ghost:hover{border-color: #d7dceb}
+
+.btn.ghost:hover{
+  border-color:#c7d7fe;
+  background: var(--brand2);
+}
 
 /* Hero */
 .hero{padding:44px 0 26px}
