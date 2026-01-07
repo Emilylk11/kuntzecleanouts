@@ -27,11 +27,15 @@ a{color:inherit}
 .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
 
 /* Topbar */
+/* Sticky top nav */
 .topbar{
-  position:sticky; top:0; z-index:50;
-  background: rgba(255,255,255,.82);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: rgba(255,255,255,.9); /* adjust if your bg isn't white */
   backdrop-filter: blur(10px);
-  border-bottom:1px solid var(--border);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
 }
 .topbar-inner{
   display:flex; align-items:center; justify-content:space-between;
@@ -370,4 +374,12 @@ input:focus, select:focus, textarea:focus{
   .grid2{grid-template-columns:1fr}
   .nav{display:none}
   .ba{height: 300px}
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* prevents sticky header from covering section titles */
+}
+section{
+  scroll-margin-top: 90px;
 }
