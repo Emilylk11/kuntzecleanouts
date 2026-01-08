@@ -7,8 +7,15 @@
   --shadow: 0 18px 45px rgba(15, 23, 42, .08);
   --radius: 18px;
 
-  --brand:#F97316;   /* orange */
-  --brand2:#E9F0FF;  /* soft pastel blue */
+/* Gateway Cleanouts Brand */
+--brand:#C8102E;          /* Cardinal red */
+--brand-dark:#A50F26;     /* Deeper red (hover) */
+
+--brand2:#1E5AA8;         /* Primary blue */
+--brand2-light:#E9F0FF;   /* Soft blue background */
+--brand2-dark:#174A8A;    /* Blue hover */
+
+--ring: rgba(30,90,168,.35);
   --max: 1120px;
   --pad: 22px;
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -107,13 +114,11 @@ body{
   white-space:nowrap;
   transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border .12s ease;
 }
-
 .btn.solid{
-  background: linear-gradient(135deg, var(--brand), #ff8a2a);
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
   color:#fff;
   border-color: transparent;
 }
-
 .btn.solid:hover{
   transform: translateY(-1px);
   box-shadow: var(--shadow);
@@ -129,8 +134,8 @@ body{
 }
 
 .btn.ghost:hover{
-  border-color:#c7d7fe;
-  background: var(--brand2);
+  border-color: var(--brand2);
+  background: var(--brand2-light);
 }
 
 /* Hero */
@@ -179,8 +184,10 @@ body{
   width:18px; height:18px;
   display:inline-flex; align-items:center; justify-content:center;
   border-radius: 999px;
-  background: var(--brand2);
+  background: var(--brand2-light);
   color: var(--brand);
+}
+
   font-weight:1000;
 }
 
@@ -228,8 +235,8 @@ input, select, textarea{
 }
 textarea{min-height:92px; resize:vertical}
 input:focus, select:focus, textarea:focus{
-  border-color: rgba(249,115,22,.45);
-  box-shadow: 0 0 0 4px rgba(233,240,255,.9);
+  border-color: var(--brand2);
+  box-shadow: 0 0 0 4px var(--ring);
 }
 .mt12{margin-top:12px}
 .form-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
@@ -372,9 +379,10 @@ input:focus, select:focus, textarea:focus{
 .amt{font-size:34px; font-weight:1000; letter-spacing:-.6px; margin:6px 0 2px}
 .price ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-weight:800}
 .featured{
-  border-color: rgba(249,115,22,.30);
-  box-shadow: 0 22px 55px rgba(249,115,22,.12);
+  border-color: rgba(30,90,168,.35);
+  box-shadow: 0 22px 55px rgba(30,90,168,.18);
 }
+
 .featured .chip{
   position:absolute;
   right:14px;
