@@ -127,50 +127,53 @@
             <input id="address" name="Address" placeholder="Street, City" required />
           </div>
 
-          <div class="grid2 mt12">
-            <div>
-              <label for="service">Service</label>
-              <select id="service" name="Service">
-                <option>Junk Removal</option>
-                <option>Garage Cleanout</option>
-                <option>Move-Out / Eviction</option>
-                <option>Yard Debris</option>
-                <option>Appliance / Furniture</option>
-                <option>Commercial Pickup</option>
-              </select>
-            </div>
-            <div>
-  <label for="serviceDate">Service date</label>
-  <input
-    type="date"
-    id="serviceDate"
-    name="Service Date"
-    required
-  />
-  <small class="form-hint">Minimum 3 days’ notice</small>
-</div>
-
-<div>
-  <label for="serviceTime">Service time</label>
-  <select
-    id="serviceTime"
-    name="Service Time"
-    required
-  >
-    <option value="" disabled selected>Choose a time</option>
-    <option>8:00 AM</option>
-    <option>9:00 AM</option>
-    <option>10:00 AM</option>
-    <option>11:00 AM</option>
-    <option>12:00 PM</option>
-    <option>1:00 PM</option>
-    <option>2:00 PM</option>
-    <option>3:00 PM</option>
-    <option>4:00 PM</option>
-    <option>5:00 PM</option>
+<!-- Service (full width) -->
+<div class="mt12">
+  <label for="service">Service</label>
+  <select id="service" name="Service">
+    <option>Junk Removal</option>
+    <option>Garage Cleanout</option>
+    <option>Move-Out / Eviction</option>
+    <option>Yard Debris</option>
+    <option>Appliance / Furniture</option>
+    <option>Commercial Pickup</option>
   </select>
 </div>
-          </div>
+
+<!-- Date + Time (two columns) -->
+<div class="grid2 mt12">
+  <div>
+    <label for="serviceDate">Service date</label>
+    <input
+      type="date"
+      id="serviceDate"
+      name="Service Date"
+      required
+    />
+    <small class="form-hint">Minimum 3 days’ notice</small>
+  </div>
+
+  <div>
+    <label for="serviceTime">Service time</label>
+    <select
+      id="serviceTime"
+      name="Service Time"
+      required
+    >
+      <option value="" disabled selected>Choose a time</option>
+      <option>8:00 AM</option>
+      <option>9:00 AM</option>
+      <option>10:00 AM</option>
+      <option>11:00 AM</option>
+      <option>12:00 PM</option>
+      <option>1:00 PM</option>
+      <option>2:00 PM</option>
+      <option>3:00 PM</option>
+      <option>4:00 PM</option>
+      <option>5:00 PM</option>
+    </select>
+  </div>
+</div>
 
           <div class="mt12">
             <label for="details">What needs hauled?</label>
