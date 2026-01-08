@@ -456,3 +456,15 @@ section{
   border: 1px solid var(--blue-soft-border);
   font-weight: 900;
 }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
