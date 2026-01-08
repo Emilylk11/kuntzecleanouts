@@ -90,3 +90,16 @@ document.querySelectorAll("[data-ba]").forEach((root) => {
     if (e.key === "ArrowRight") setPct(current + 3);
   });
 });
+
+  (function () {
+    const dateInput = document.getElementById("serviceDate");
+    if (!dateInput) return;
+
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, "0");
+    const dd = String(today.getDate()).padStart(2, "0");
+
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+  })();
+
