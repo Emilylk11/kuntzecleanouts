@@ -593,3 +593,53 @@ input:focus, select:focus, textarea:focus{
 .nav{ margin-left:auto; }
 .actions{ margin-left:12px; }
 .nav-toggle{ margin-left:10px; }
+
+/* Services dropdown (safe add-on) */
+.nav-dd{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dd-trigger{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.caret{
+  font-size: 12px;
+  opacity: .8;
+}
+
+.nav-dd-menu{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 240px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 8px;
+  display: none;
+  z-index: 99999;
+}
+
+.nav-dd-menu a{
+  display: block;
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.nav-dd-menu a:hover{
+  background: var(--bg2);
+}
+
+/* Open on hover (desktop) */
+@media (min-width: 981px){
+  .nav-dd:hover .nav-dd-menu{ display:block; }
+}
