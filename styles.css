@@ -1,3 +1,6 @@
+/* =========================
+   GLOBAL TOKENS
+   ========================= */
 :root{
   --bg:#ffffff;
   --bg2:#f6f7fb;
@@ -7,37 +10,48 @@
   --shadow: 0 18px 45px rgba(15, 23, 42, .08);
   --radius: 18px;
 
-  /* add these */
-  --brand2: var(--blue-soft-bg);
-  --brand2-light: #ffffff;
+  /* Primary Gateway Cleanouts Brand */
+  --brand:#C8102E;
+  --brand-dark:#A50F26;
 
   /* Blues (refined) */
-  --blue-main:#1E5AA8;        /* optional / rarely used */
-  --blue-soft:#A9CCF6;        /* baby blue */
-  --blue-soft-bg:#EEF5FF;     /* very light blue background */
+  --blue-main:#1E5AA8;
+  --blue-soft:#A9CCF6;
+  --blue-soft-bg:#EEF5FF;
   --blue-soft-border:#C9DDFC;
+
+  /* compatibility aliases used throughout your CSS */
+  --brand2: var(--blue-soft-bg);
+  --brand2-light: #ffffff;
 
   --ring: rgba(30,90,168,.25);
   --max: 1120px;
   --pad: 22px;
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  --topbar-h: 76px; /* fixed header height */
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* prevents sticky header from covering section titles */
+}
 body{
   margin:0;
+  padding-top: var(--topbar-h);
   font-family:var(--font);
   color:var(--text);
-  background: var(--bg); /* solid so sections don't "cut off" */
+  background: var(--bg);
   line-height:1.55;
 }
 a{color:inherit}
 .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
 
-/* Topbar (fixed + clean) */
-:root { --topbar-h: 76px; } /* adjust if needed */
-
+/* =========================
+   TOPBAR
+   ========================= */
 .topbar{
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -55,10 +69,6 @@ a{color:inherit}
   gap:12px;
   padding:14px 0;
   min-height: var(--topbar-h);
-}
-
-body{
-  padding-top: var(--topbar-h);
 }
 
 /* Brand + logo badge */
@@ -80,7 +90,7 @@ body{
   background: linear-gradient(135deg, var(--brand2), #ffffff);
 }
 
-.mark img{
+.brand-logo{
   width:100%;
   height:100%;
   object-fit: cover; /* use 'contain' if you don't want cropping */
@@ -90,8 +100,11 @@ body{
 .brand-title{font-weight:900; letter-spacing:-.2px}
 .brand-sub{font-size:12px; color:var(--muted); font-weight:700}
 
+/* Desktop nav */
 .nav{
-  display:flex; gap:18px; align-items:center;
+  display:flex;
+  gap:18px;
+  align-items:center;
   font-weight:700;
 }
 .nav a{
@@ -100,15 +113,19 @@ body{
 }
 .nav a:hover{color:var(--text); text-decoration:underline}
 
-.actions{display:flex; gap:10px; align-items:center}
+.actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
 
 /* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:10px 14px;          /* ← same spacing as before */
-  border-radius:14px;         /* ← same rounded corners */
+  padding:10px 14px;
+  border-radius:14px;
   font-weight:900;
   text-decoration:none;
   border:1px solid var(--border);
@@ -125,26 +142,28 @@ body{
   box-shadow: var(--shadow);
   filter: brightness(.97);
 }
-
-.btn:hover{transform: translateY(-1px); box-shadow: var(--shadow); filter: brightness(.98);}
-
 .btn.ghost{
   background:#fff;
   color: var(--text);
   border-color: var(--border);
 }
-
 .btn.ghost:hover{
   border-color: var(--brand2);
   background: var(--brand2-light);
 }
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  filter: brightness(.98);
+}
 
-/* Hero */
+/* =========================
+   HERO
+   ========================= */
 .hero{
   padding:44px 0 26px;
   background: linear-gradient(180deg, #fff, var(--bg2));
 }
-
 .hero-grid{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
@@ -182,7 +201,7 @@ body{
   border-radius: 999px;
   color: var(--muted);
   font-weight:800;
-  font-size:10px;        /* smaller + cleaner */
+  font-size:10px;
   line-height:1.2;
 }
 .icon{
@@ -193,10 +212,9 @@ body{
   color: var(--brand);
 }
 
-  font-weight:1000;
-}
-
-/* Cards + Forms */
+/* =========================
+   CARDS + FORMS
+   ========================= */
 .card{
   background:#fff;
   border:1px solid var(--border);
@@ -210,6 +228,7 @@ body{
 }
 .card-title{margin:0; font-size:18px}
 .card-sub{margin:6px 0 0; color:var(--muted); font-weight:700}
+
 .chip{
   padding:8px 10px;
   border-radius: 999px;
@@ -220,8 +239,10 @@ body{
   font-size:12px;
   white-space:nowrap;
 }
+
 .form{padding:14px 18px 18px}
 .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+
 label{
   display:block;
   font-size:12px;
@@ -247,9 +268,15 @@ input:focus, select:focus, textarea:focus{
 .form-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
 .fine{margin:10px 0 0; color:var(--muted); font-size:12px; font-weight:700}
 
-/* Sections */
+/* =========================
+   SECTIONS
+   ========================= */
 .section{padding:34px 0}
-.section.soft{background: var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border)}
+.section.soft{
+  background: var(--bg2);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
 .section-head{margin-bottom:14px}
 .section-head h2{margin:0 0 8px; letter-spacing:-.4px}
 .section-head p{margin:0; color:var(--muted); font-weight:700; max-width: 70ch}
@@ -292,12 +319,7 @@ input:focus, select:focus, textarea:focus{
   touch-action:none;
   background:#f3f4f6;
 }
-.ba-img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
+.ba-img{width:100%; height:100%; object-fit:cover; display:block}
 .ba-before{
   position:absolute;
   inset:0;
@@ -387,12 +409,7 @@ input:focus, select:focus, textarea:focus{
   border-color: rgba(30,90,168,.35);
   box-shadow: 0 22px 55px rgba(30,90,168,.18);
 }
-
-.featured .chip{
-  position:absolute;
-  right:14px;
-  top:14px;
-}
+.featured .chip{ position:absolute; right:14px; top:14px }
 
 /* Footer CTA + Footer */
 .footer-cta{
@@ -406,9 +423,7 @@ input:focus, select:focus, textarea:focus{
 .tight{margin:0 0 6px}
 .footer-cta-actions{display:flex; gap:10px; flex-wrap:wrap}
 
-.footer{
-  padding:18px 0 28px;
-}
+.footer{padding:18px 0 28px}
 .footer-inner{
   display:flex;
   justify-content:space-between;
@@ -422,57 +437,21 @@ input:focus, select:focus, textarea:focus{
 .footer-links a{text-decoration:none}
 .footer-links a:hover{text-decoration:underline}
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero-grid{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr}
-  .results-grid{grid-template-columns:1fr}
-  .pricing{grid-template-columns:1fr}
-  .grid2{grid-template-columns:1fr}
-  .nav{display:none}
-  .ba{height: 300px}
-}
-
-html{
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px; /* prevents sticky header from covering section titles */
-}
-section{
-  scroll-margin-top: 90px;
-}
-.mark-logo {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-}
-
+/* Pills */
 .reply-pill,
 .chip,
 .badge,
-.pill {
+.pill{
   background: var(--blue-soft-bg);
   color: var(--text);
   border: 1px solid var(--blue-soft-border);
   font-weight: 900;
 }
 
-.grid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-@media (max-width: 640px) {
-  .grid2 {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* =========================
    NAV DROPDOWN + MOBILE NAV
    ========================= */
-
-.nav-dd { position: relative; display: inline-flex; align-items: center; }
+.nav-dd{ position: relative; display: inline-flex; align-items: center; }
 
 .nav-dd-btn{
   border: 0;
@@ -487,7 +466,6 @@ section{
   gap: 6px;
 }
 .nav-dd-btn:hover{ color: var(--text); text-decoration: underline; }
-
 .caret{ font-size: 12px; opacity: .85; }
 
 .nav-dd-menu{
@@ -503,7 +481,6 @@ section{
   display: none;
   z-index: 99999;
 }
-
 .nav-dd-menu a{
   display: block;
   padding: 10px 10px;
@@ -516,11 +493,9 @@ section{
   background: var(--blue-soft-bg);
   border: 1px solid var(--blue-soft-border);
 }
-
-/* open state */
 .nav-dd.open .nav-dd-menu{ display: block; }
 
-/* MOBILE TOGGLE BUTTON */
+/* Mobile menu button */
 .nav-toggle{
   display: none;
   border: 1px solid var(--border);
@@ -530,7 +505,6 @@ section{
   cursor: pointer;
   box-shadow: none;
 }
-
 .burger{
   width: 22px;
   height: 14px;
@@ -557,7 +531,7 @@ section{
   border:0;
 }
 
-/* MOBILE PANEL */
+/* Mobile panel */
 .nav-mobile{
   position: absolute;
   top: 100%;
@@ -568,7 +542,6 @@ section{
   box-shadow: var(--shadow);
   padding: 12px var(--pad);
 }
-
 .nav-mobile a{
   display: block;
   padding: 12px 10px;
@@ -577,12 +550,10 @@ section{
   text-decoration: none;
   color: var(--text);
 }
-
 .nav-mobile a:hover{
   background: var(--blue-soft-bg);
   border: 1px solid var(--blue-soft-border);
 }
-
 .nav-mobile-sub{
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -590,15 +561,24 @@ section{
   margin: 4px 0 10px;
   background: #fff;
 }
-
 .nav-mobile-sub a{
   font-weight: 800;
   color: var(--muted);
   padding: 10px 10px;
 }
 
-/* Only show hamburger on small screens */
+/* Responsive */
 @media (max-width: 980px){
-  .nav { display: none; }
-  .nav-toggle { display: inline-flex; align-items:center; justify-content:center; }
+  .hero-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr}
+  .pricing{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  .nav{display:none}
+  .nav-toggle{ display: inline-flex; align-items:center; justify-content:center; }
+  .ba{height: 300px}
+}
+
+@media (max-width: 640px){
+  .grid2{ grid-template-columns: 1fr; }
 }
