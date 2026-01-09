@@ -31,52 +31,53 @@
 
 <body>
   <!-- Topbar -->
-<nav class="nav" aria-label="Primary">
-  <a href="index.html#results">Results</a>
-  <a href="pricing.html">Pricing</a>
+<!-- Topbar -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
 
-  <!-- Services dropdown -->
-  <div class="nav-dd" id="navServices">
-    <button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="servicesMenu">
+    <a class="brand" href="#top" aria-label="Go to top">
+      <div class="mark" aria-hidden="true">
+        <img
+          class="brand-logo"
+          src="/kuntzecleanouts/assets/pfplogo.png"
+          alt="Kuntze Cleanouts logo"
+        />
+      </div>
+      <div>
+        <div class="brand-title">Kuntze Cleanouts</div>
+        <div class="brand-sub">Local Hauling • Responsible disposal • Upfront pricing</div>
+      </div>
+    </a>
+
+    <!-- NAV (only thing that changed) -->
+   <nav class="nav">
+  <div class="nav-dd">
+    <a class="nav-dd-trigger" href="services.html#residential">
       Services <span class="caret" aria-hidden="true">▾</span>
-    </button>
+    </a>
 
-    <div class="nav-dd-menu" id="servicesMenu" role="menu">
-      <a role="menuitem" href="services.html#residential">Residential Junk Removal</a>
-      <a role="menuitem" href="services.html#commercial">Commercial Junk Removal</a>
-      <a role="menuitem" href="services.html#garage-attic">Garage &amp; Attic Cleanouts</a>
-      <a role="menuitem" href="services.html#furniture">Furniture &amp; Appliance Removal</a>
-      <a role="menuitem" href="services.html#yard">Yard Debris Removal</a>
-      <a role="menuitem" href="services.html#same-day">Same-Day Pickup</a>
+    <div class="nav-dd-menu" aria-label="Services menu">
+      <a href="services.html#residential">Residential</a>
+      <a href="services.html#commercial">Commercial</a>
+      <a href="services.html#garage-attic">Garage &amp; Attic</a>
+      <a href="services.html#furniture">Furniture &amp; Appliances</a>
+      <a href="services.html#yard">Yard Debris</a>
+      <a href="services.html#same-day">Same-Day</a>
     </div>
   </div>
 
-  <a href="index.html#quote">Quote</a>
-</nav>
-
-<!-- Mobile menu button (shows on <=980px) -->
-<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
-  <span class="sr-only">Open menu</span>
-  <span class="burger" aria-hidden="true"></span>
-</button>
-
-<!-- Mobile nav panel -->
-<nav class="nav-mobile" id="mobileNav" aria-label="Mobile" hidden>
-  <a href="services.html">Services (All)</a>
-  <div class="nav-mobile-sub">
-    <a href="services.html#residential">Residential</a>
-    <a href="services.html#commercial">Commercial</a>
-    <a href="services.html#garage-attic">Garage/Attic</a>
-    <a href="services.html#furniture">Furniture/Appliances</a>
-    <a href="services.html#yard">Yard Debris</a>
-    <a href="services.html#same-day">Same-Day</a>
-  </div>
-
-  <a href="index.html#results">Results</a>
+  <a href="#results">Results</a>
   <a href="pricing.html">Pricing</a>
-  <a href="index.html#quote">Get a Quote</a>
-  <a href="tel:+13146493059">Call (314) 649-3059</a>
+  <a href="#quote">Quote</a>
 </nav>
+
+    <div class="actions">
+      <a class="btn ghost" href="tel:+13146493059">Call (314) 649-3059</a>
+      <a class="btn solid" href="#quote">Get a Quote</a>
+    </div>
+
+  </div>
+</header>
 
   <!-- Hero -->
   <main id="top" class="hero">
