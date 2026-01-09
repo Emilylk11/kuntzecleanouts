@@ -581,3 +581,15 @@ input:focus, select:focus, textarea:focus{
 @media (max-width: 640px){
   .grid2{ grid-template-columns: 1fr; }
 }
+
+/* Keep brand left, everything else right */
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* Push nav/actions/toggle to the right as a cluster */
+.nav{ margin-left:auto; }
+.actions{ margin-left:12px; }
+.nav-toggle{ margin-left:10px; }
