@@ -7,9 +7,11 @@
   --shadow: 0 18px 45px rgba(15, 23, 42, .08);
   --radius: 18px;
 
-  /* Primary Gateway Cleanouts Brand */
-  --brand:#C8102E;
-  --brand-dark:#A50F26;
+  /* add these */
+  --brand2: var(--blue-soft-bg);
+  --brand2-light: #ffffff;
+}
+
 
   /* Blues (refined) */
   --blue-main:#1E5AA8;        /* optional / rarely used */
