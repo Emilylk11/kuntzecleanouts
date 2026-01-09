@@ -103,3 +103,64 @@ document.querySelectorAll("[data-ba]").forEach((root) => {
     dateInput.min = `${yyyy}-${mm}-${dd}`;
   })();
 
+(function () {
+  // Desktop dropdown
+  const dd = document.getElementById('navServices');
+  const ddBtn = dd ? dd.querySelector('.nav-dd-btn') : null;
+
+  function setDropdown(open){
+    if(!dd || !ddBtn) return;
+    dd.classList.toggle('open', open);
+    ddBtn.setAttribute('aria-expanded', String(open));
+  }
+
+  if (ddBtn) {
+    ddBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = dd.classList.contains('open');
+      setDropdown(!isOpen);
+    });
+
+    // close if you click outside
+    document.addEventListener('click', (e) => {
+      if (!dd) return;
+      if (!dd.contains(e.target)) setDropdown(false);
+    });
+
+    // close after clicking a dropdown link
+    dd.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (a) setDropdown(false);
+    });
+  }
+
+  // Mobile menu
+  const toggle = document.querySelector('.nav-toggle');
+  const mobileNav = document.getElementById('mobileNav');
+
+  function setMobile(open){
+    if(!toggle || !mobileNav) return;
+    toggle.setAttribute('aria-expanded', String(open));
+    mobileNav.hidden = !open;
+  }
+
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      setMobile(open);
+      // also close desktop dropdown just in case
+      setDropdown(false);
+    });
+
+    // close mobile nav on link click
+    mobileNav.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (a) setMobile(false);
+    });
+
+    // close on resize back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 980) setMobile(false);
+    });
+  }
+})();
