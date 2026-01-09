@@ -31,52 +31,80 @@
 
 <body>
   <!-- Topbar -->
-<nav class="nav" aria-label="Primary">
-  <a href="index.html#results">Results</a>
-  <a href="pricing.html">Pricing</a>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
 
-  <!-- Services dropdown -->
-  <div class="nav-dd" id="navServices">
-    <button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="servicesMenu">
-      Services <span class="caret" aria-hidden="true">▾</span>
-    </button>
+      <a class="brand" href="index.html#top" aria-label="Go to top">
+        <div class="mark" aria-hidden="true">
+          <img
+            class="brand-logo"
+            src="assets/gatewaymainlogo.png"
+            alt="Gateway Cleanouts logo"
+          />
+        </div>
+        <div>
+          <div class="brand-title">Gateway Cleanouts</div>
+          <div class="brand-sub">Local Hauling • Responsible disposal • Upfront pricing</div>
+        </div>
+      </a>
 
-    <div class="nav-dd-menu" id="servicesMenu" role="menu">
-      <a role="menuitem" href="services.html#residential">Residential Junk Removal</a>
-      <a role="menuitem" href="services.html#commercial">Commercial Junk Removal</a>
-      <a role="menuitem" href="services.html#garage-attic">Garage &amp; Attic Cleanouts</a>
-      <a role="menuitem" href="services.html#furniture">Furniture &amp; Appliance Removal</a>
-      <a role="menuitem" href="services.html#yard">Yard Debris Removal</a>
-      <a role="menuitem" href="services.html#same-day">Same-Day Pickup</a>
+      <!-- Desktop nav -->
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#results">Results</a>
+        <a href="pricing.html">Pricing</a>
+
+        <!-- Services dropdown -->
+        <div class="nav-dd" id="navServices">
+          <button class="nav-dd-btn" type="button" aria-expanded="false" aria-controls="servicesMenu">
+            Services <span class="caret" aria-hidden="true">▾</span>
+          </button>
+
+          <div class="nav-dd-menu" id="servicesMenu" role="menu">
+            <a role="menuitem" href="services.html#residential">Residential Junk Removal</a>
+            <a role="menuitem" href="services.html#commercial">Commercial Junk Removal</a>
+            <a role="menuitem" href="services.html#garage-attic">Garage &amp; Attic Cleanouts</a>
+            <a role="menuitem" href="services.html#furniture">Furniture &amp; Appliance Removal</a>
+            <a role="menuitem" href="services.html#yard">Yard Debris Removal</a>
+            <a role="menuitem" href="services.html#same-day">Same-Day Pickup</a>
+          </div>
+        </div>
+
+        <a href="index.html#quote">Quote</a>
+      </nav>
+
+      <!-- Right-side actions -->
+      <div class="actions">
+        <a class="btn ghost" href="tel:+13146493059">Call (314) 649-3059</a>
+        <a class="btn solid" href="index.html#quote">Get a Quote</a>
+      </div>
+
+      <!-- Mobile menu button (shows on <=980px) -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+        <span class="sr-only">Open menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
     </div>
-  </div>
 
-  <a href="index.html#quote">Quote</a>
-</nav>
+    <!-- Mobile nav panel -->
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile" hidden>
+      <a href="services.html">Services (All)</a>
+      <div class="nav-mobile-sub">
+        <a href="services.html#residential">Residential</a>
+        <a href="services.html#commercial">Commercial</a>
+        <a href="services.html#garage-attic">Garage/Attic</a>
+        <a href="services.html#furniture">Furniture/Appliances</a>
+        <a href="services.html#yard">Yard Debris</a>
+        <a href="services.html#same-day">Same-Day</a>
+      </div>
 
-<!-- Mobile menu button (shows on <=980px) -->
-<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav">
-  <span class="sr-only">Open menu</span>
-  <span class="burger" aria-hidden="true"></span>
-</button>
-
-<!-- Mobile nav panel -->
-<nav class="nav-mobile" id="mobileNav" aria-label="Mobile" hidden>
-  <a href="services.html">Services (All)</a>
-  <div class="nav-mobile-sub">
-    <a href="services.html#residential">Residential</a>
-    <a href="services.html#commercial">Commercial</a>
-    <a href="services.html#garage-attic">Garage/Attic</a>
-    <a href="services.html#furniture">Furniture/Appliances</a>
-    <a href="services.html#yard">Yard Debris</a>
-    <a href="services.html#same-day">Same-Day</a>
-  </div>
-
-  <a href="index.html#results">Results</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="index.html#quote">Get a Quote</a>
-  <a href="tel:+13146493059">Call (314) 649-3059</a>
-</nav>
+      <a href="index.html#results">Results</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#quote">Get a Quote</a>
+      <a href="tel:+13146493059">Call (314) 649-3059</a>
+    </nav>
+  </header>
 
   <!-- Hero -->
   <main id="top" class="hero">
