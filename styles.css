@@ -681,7 +681,7 @@ input:focus, select:focus, textarea:focus{
     align-items: flex-start;
   }
   #quote .card-title { margin: 0 0 4px 0 !important; }
-  #quote .card-sub { margin: 0 !important; }
+  #quote .card-sub { margin: 0 !important; font-size: 10px;}
 
   /* Reduce spacing everywhere */
   #quote .mt12 { margin-top: 8px !important; }
