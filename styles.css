@@ -700,3 +700,59 @@ input:focus, select:focus, textarea:focus{
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.08);
 }
+/* Force form text to be dark */
+.fast-estimate,
+.fast-estimate * {
+  color: #1f2937 !important; /* slate-800 */
+}
+
+/* Placeholder text */
+.fast-estimate input::placeholder,
+.fast-estimate textarea::placeholder {
+  color: #9ca3af !important; /* slate-400 */
+}
+
+/* Small helper labels (like Replies fast) */
+.fast-estimate .badge,
+.fast-estimate .tag {
+  color: #1f2937 !important;
+}
+.fast-estimate .form-group {
+  margin-bottom: 10px !important;
+}
+.fast-estimate label {
+  font-size: 12px !important;
+  font-weight: 500;
+  margin-bottom: 4px !important;
+}
+.fast-estimate input,
+.fast-estimate select,
+.fast-estimate textarea {
+  height: 40px !important;
+  padding: 8px 10px !important;
+  font-size: 14px !important;
+  border-radius: 10px;
+}
+.fast-estimate textarea {
+  min-height: 70px !important;
+}
+.fast-estimate button {
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  border-radius: 10px;
+}
+.fast-estimate h3,
+.fast-estimate h2 {
+  font-size: 1.1rem !important;
+  margin-bottom: 6px !important;
+}
+.fast-estimate p {
+  font-size: 13px !important;
+  line-height: 1.45;
+  margin-bottom: 10px !important;
+}
+@media (min-width: 1024px) {
+  .fast-estimate {
+    max-width: 350px !important;
+  }
+}
