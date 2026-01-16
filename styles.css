@@ -779,3 +779,7 @@ input:focus, select:focus, textarea:focus{
     margin-top: 6px !important;
   }
 }
+#quote.card,
+#quote.card * {
+  color: #0f172a !important; /* dark slate */
+}
