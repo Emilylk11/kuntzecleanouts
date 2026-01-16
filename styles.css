@@ -663,215 +663,119 @@ input:focus, select:focus, textarea:focus{
   .nav-dd:hover .nav-dd-menu{ display:block; }
 }
 
-/* Form container */
-.fast-estimate form {
-  max-width: 420px;
-  padding: 1.25rem;
-  margin-top: 1rem;
-}
-
-/* Inputs + textarea */
-.fast-estimate input,
-.fast-estimate textarea {
-  font-size: 0.9rem;
-  padding: 10px 12px;
-}
-
-/* Labels */
-.fast-estimate label {
-  font-size: 0.8rem;
-  margin-bottom: 4px;
-}
-
-/* Reduce spacing between fields */
-.fast-estimate .form-group {
-  margin-bottom: 0.75rem;
-}
-
-/* Button */
-.fast-estimate button {
-  padding: 10px 16px;
-  font-size: 0.9rem;
-}
-
-.fast-estimate {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-/* Force form text to be dark */
-.fast-estimate,
-.fast-estimate * {
-  color: #1f2937 !important; /* slate-800 */
-}
-
-/* Placeholder text */
-.fast-estimate input::placeholder,
-.fast-estimate textarea::placeholder {
-  color: #9ca3af !important; /* slate-400 */
-}
-
-/* Small helper labels (like Replies fast) */
-.fast-estimate .badge,
-.fast-estimate .tag {
-  color: #1f2937 !important;
-}
-.fast-estimate .form-group {
-  margin-bottom: 10px !important;
-}
-.fast-estimate label {
-  font-size: 12px !important;
-  font-weight: 500;
-  margin-bottom: 4px !important;
-}
-.fast-estimate input,
-.fast-estimate select,
-.fast-estimate textarea {
-  height: 40px !important;
-  padding: 8px 10px !important;
-  font-size: 14px !important;
-  border-radius: 10px;
-}
-.fast-estimate textarea {
-  min-height: 70px !important;
-}
-.fast-estimate button {
-  padding: 10px 14px !important;
-  font-size: 14px !important;
-  border-radius: 10px;
-}
-.fast-estimate h3,
-.fast-estimate h2 {
-  font-size: 1.1rem !important;
-  margin-bottom: 6px !important;
-}
-.fast-estimate p {
-  font-size: 13px !important;
-  line-height: 1.45;
-  margin-bottom: 10px !important;
-}
-@media (min-width: 1024px) {
-  .fast-estimate {
-    max-width: 350px !important;
-  }
-}
-
 /* =========================
-   QUOTE CARD (FORM) OVERRIDES
-   Targets: <aside class="card" id="quote"> and <form class="form">
+   MAKE QUOTE FORM SHORTER (DESKTOP)
+   Goal: reduce vertical height drastically by reflowing fields
 ========================= */
+@media (min-width: 1024px) {
 
-#quote.card,
-#quote.card * {
-  color: #0f172a !important; /* slate-900 */
-}
+  /* Keep the card width normal again */
+  #quote.card {
+    max-width: 560px !important;  /* wider so we can make rows fewer */
+    padding: 16px 18px !important;
+  }
 
-/* Keep muted text muted (still dark-mode friendly) */
-#quote .muted,
-#quote .fine,
-#quote .form-hint,
-#quote .card-sub {
-  color: #475569 !important; /* slate-600 */
-}
+  /* Tighten header area */
+  #quote .card-head {
+    margin-bottom: 8px !important;
+    align-items: flex-start;
+  }
+  #quote .card-title { margin: 0 0 4px 0 !important; }
+  #quote .card-sub { margin: 0 !important; }
 
-/* Tighten the whole card (this is what makes it "smaller") */
-#quote.card {
-  max-width: 420px !important; /* smaller footprint */
-  padding: 16px 18px !important; /* less internal space */
-}
+  /* Reduce spacing everywhere */
+  #quote .mt12 { margin-top: 8px !important; }
+  #quote .grid2 { gap: 10px !important; }
 
-/* Header spacing + smaller typography */
-#quote .card-head {
-  margin-bottom: 10px !important;
-  gap: 10px !important;
-}
+  /* Make inputs shorter */
+  #quote input,
+  #quote select {
+    height: 38px !important;
+    padding: 8px 10px !important;
+  }
 
-#quote .card-title {
-  font-size: 1.1rem !important;
-  line-height: 1.2 !important;
-  margin: 0 0 6px 0 !important;
-}
+  /* Make textarea MUCH shorter */
+  #quote textarea {
+    min-height: 56px !important;
+    padding: 8px 10px !important;
+  }
 
-#quote .card-sub {
-  font-size: 0.9rem !important;
-  line-height: 1.35 !important;
-  margin: 0 !important;
-}
+  /* Make labels a bit tighter */
+  #quote label {
+    margin-bottom: 3px !important;
+    font-size: 12px !important;
+  }
 
-/* "Replies fast" chip smaller */
-#quote .chip {
-  font-size: 12px !important;
-  padding: 6px 10px !important;
-}
+  /* Reduce hint spacing */
+  #quote .form-hint {
+    margin-top: 3px !important;
+    font-size: 11px !important;
+  }
 
-/* Reduce default spacing utilities you used */
-#quote .mt12 {
-  margin-top: 8px !important; /* down from 12px+ */
-}
+  /* Buttons smaller + closer */
+  #quote .form-actions {
+    margin-top: 10px !important;
+    gap: 10px !important;
+  }
+  #quote .form-actions .btn {
+    padding: 10px 12px !important;
+  }
 
-/* Make 2-column grid tighter */
-#quote .grid2 {
-  gap: 10px !important;
-}
+  /* OPTIONAL: hide the tip line on desktop to save height */
+  #quote .fine {
+    display: none !important;
+  }
 
-/* Labels smaller + tighter */
-#quote label {
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  margin-bottom: 4px !important;
-  display: block;
-}
+  /* -------------------------------------------------------
+     BIG WIN: Reflow the single full-width sections into 2-col
+     We target the existing wrappers using :has(label[for=...])
+     Works in modern browsers (Chrome/Safari/Edge).
+  -------------------------------------------------------- */
 
-/* Inputs/select/textarea = smaller height */
-#quote input,
-#quote select,
-#quote textarea {
-  font-size: 14px !important;
-  padding: 9px 10px !important;
-  border-radius: 10px !important;
-  line-height: 1.2 !important;
-}
+  /* Turn the "Service address" full-width row into 2 columns with "Service" */
+  #quote form.form {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px !important;
+  }
 
-/* Force consistent heights (date + select too) */
-#quote input,
-#quote select {
-  height: 40px !important;
-}
+  /* Make the first grid2 (name/phone) span full width but keep 2 columns */
+  #quote form.form > .grid2:first-of-type {
+    grid-column: 1 / -1 !important;
+  }
 
-/* Textarea: reduce “big block” energy */
-#quote textarea {
-  min-height: 80px !important;
-  resize: vertical;
-}
+  /* Service address (mt12) goes left column */
+  #quote form.form > .mt12:has(label[for="address"]) {
+    grid-column: 1 / 2 !important;
+    margin-top: 0 !important;
+  }
 
-/* Placeholder color (prevents weird light text) */
-#quote input::placeholder,
-#quote textarea::placeholder {
-  color: #94a3b8 !important; /* slate-400 */
-}
+  /* Service (mt12) goes right column */
+  #quote form.form > .mt12:has(label[for="service"]) {
+    grid-column: 2 / 3 !important;
+    margin-top: 0 !important;
+  }
 
-/* Hint text smaller + tighter */
-#quote .form-hint {
-  font-size: 12px !important;
-  margin-top: 4px !important;
-  display: block;
-}
+  /* Date+Time grid2 spans full width */
+  #quote form.form > .grid2:has(label[for="serviceDate"]) {
+    grid-column: 1 / -1 !important;
+    margin-top: 0 !important;
+  }
 
-/* Buttons row tighter and smaller */
-#quote .form-actions {
-  margin-top: 10px !important;
-  gap: 10px !important;
-}
+  /* Textarea spans full width */
+  #quote form.form > .mt12:has(label[for="details"]) {
+    grid-column: 1 / -1 !important;
+    margin-top: 0 !important;
+  }
 
-#quote .form-actions .btn {
-  padding: 10px 12px !important;
-  font-size: 14px !important;
-  border-radius: 12px !important;
-}
+  /* Buttons row spans full width */
+  #quote form.form > .form-actions {
+    grid-column: 1 / -1 !important;
+  }
 
-/* Bottom tip line smaller */
-#quote .fine {
-  font-size: 12px !important;
-  margin-top: 10px !important;
+  /* Tip line already hidden; if you keep it, force full width */
+  #quote form.form > .fine {
+    grid-column: 1 / -1 !important;
+    margin-top: 6px !important;
+  }
 }
