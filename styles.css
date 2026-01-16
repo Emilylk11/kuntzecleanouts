@@ -756,3 +756,122 @@ input:focus, select:focus, textarea:focus{
     max-width: 350px !important;
   }
 }
+
+/* =========================
+   QUOTE CARD (FORM) OVERRIDES
+   Targets: <aside class="card" id="quote"> and <form class="form">
+========================= */
+
+#quote.card,
+#quote.card * {
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Keep muted text muted (still dark-mode friendly) */
+#quote .muted,
+#quote .fine,
+#quote .form-hint,
+#quote .card-sub {
+  color: #475569 !important; /* slate-600 */
+}
+
+/* Tighten the whole card (this is what makes it "smaller") */
+#quote.card {
+  max-width: 420px !important; /* smaller footprint */
+  padding: 16px 18px !important; /* less internal space */
+}
+
+/* Header spacing + smaller typography */
+#quote .card-head {
+  margin-bottom: 10px !important;
+  gap: 10px !important;
+}
+
+#quote .card-title {
+  font-size: 1.1rem !important;
+  line-height: 1.2 !important;
+  margin: 0 0 6px 0 !important;
+}
+
+#quote .card-sub {
+  font-size: 0.9rem !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+}
+
+/* "Replies fast" chip smaller */
+#quote .chip {
+  font-size: 12px !important;
+  padding: 6px 10px !important;
+}
+
+/* Reduce default spacing utilities you used */
+#quote .mt12 {
+  margin-top: 8px !important; /* down from 12px+ */
+}
+
+/* Make 2-column grid tighter */
+#quote .grid2 {
+  gap: 10px !important;
+}
+
+/* Labels smaller + tighter */
+#quote label {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin-bottom: 4px !important;
+  display: block;
+}
+
+/* Inputs/select/textarea = smaller height */
+#quote input,
+#quote select,
+#quote textarea {
+  font-size: 14px !important;
+  padding: 9px 10px !important;
+  border-radius: 10px !important;
+  line-height: 1.2 !important;
+}
+
+/* Force consistent heights (date + select too) */
+#quote input,
+#quote select {
+  height: 40px !important;
+}
+
+/* Textarea: reduce “big block” energy */
+#quote textarea {
+  min-height: 80px !important;
+  resize: vertical;
+}
+
+/* Placeholder color (prevents weird light text) */
+#quote input::placeholder,
+#quote textarea::placeholder {
+  color: #94a3b8 !important; /* slate-400 */
+}
+
+/* Hint text smaller + tighter */
+#quote .form-hint {
+  font-size: 12px !important;
+  margin-top: 4px !important;
+  display: block;
+}
+
+/* Buttons row tighter and smaller */
+#quote .form-actions {
+  margin-top: 10px !important;
+  gap: 10px !important;
+}
+
+#quote .form-actions .btn {
+  padding: 10px 12px !important;
+  font-size: 14px !important;
+  border-radius: 12px !important;
+}
+
+/* Bottom tip line smaller */
+#quote .fine {
+  font-size: 12px !important;
+  margin-top: 10px !important;
+}
