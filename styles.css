@@ -165,8 +165,8 @@ a{color:inherit}
  background: linear-gradient(
     135deg,
     #0b1324 0%,
-    #111c3a 45%,
-    #1a2a52 100%
+    #111c3a 25%,
+    #1a2a52 80%
   );
   color: #ffffff;
 }
