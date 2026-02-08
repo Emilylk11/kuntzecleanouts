@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services | Gateway Cleanouts</title>
+  <meta name="description" content="Junk removal services: residential, commercial, garage cleanouts, furniture/appliances, yard debris, and same-day pickup." />
+
+
+<link rel="icon" href="./assets/gcfavicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="services.css" />
+
+</head>
+
+<body>
+<!-- Topbar -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+
+        <a class="brand" href="index.html" aria-label="Go to homepage">
+  <div class="mark" aria-hidden="true">
+    <img
+      class="brand-logo"
+      src="./assets/gatewaymainlogo.png"
+      alt="Gateway Cleanouts logo"
+    />
+  </div>
+  <div>
+    <div class="brand-title">Gateway Cleanouts</div>
+    <div class="brand-sub">
+      Local Hauling • Upfront pricing
+    </div>
+  </div>
+</a>
+
+      <nav class="nav">
+        <div class="nav-dd">
+          <a class="nav-dd-trigger" href="services.html#residential">
+            Services <span class="caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dd-menu" aria-label="Services menu">
+            <a href="services.html#residential">Residential</a>
+            <a href="services.html#commercial">Commercial</a>
+            <a href="services.html#garage-attic">Garage &amp; Attic</a>
+            <a href="services.html#furniture">Furniture &amp; Appliances</a>
+            <a href="services.html#yard">Yard Debris</a>
+            <a href="services.html#same-day">Same-Day</a>
+          </div>
+        </div>
+
+        <a href="index.html#results">Results</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="quote.html" aria-current="page">Quote</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn ghost" href="tel:+13146493059">Call (314) 649-3059</a>
+        <a class="btn solid" href="sms:+13146493059&body=Hi!%20I%27d%20like%20a%20junk%20removal%20quote.%20My%20address%20is%20____%20and%20the%20items%20are%20____.">Text Photos</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Fast scheduling when available.</p>
+        <h1>Get a quick, upfront quote.</h1>
+        <p class="sub">
+          Texting photos is the fastest way to get an exact price. We’ll confirm your total before we load anything.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn solid" href="sms:+13146493059&body=Hi!%20I%27d%20like%20a%20junk%20removal%20quote.%20My%20address%20is%20____%20and%20the%20items%20are%20____.">Text Photos for Fast Pricing</a>
+          <a class="btn ghost" href="pricing.html">See Pricing Ranges</a>
+        </div>
+
+        <div class="trust-row" role="list" aria-label="Trust signals">
+          <div class="trust" role="listitem"><span class="icon" aria-hidden="true">✓</span><span>Confirm price upfront</span></div>
+          <div class="trust" role="listitem"><span class="icon" aria-hidden="true">✓</span><span>Friendly crew</span></div>
+          <div class="trust" role="listitem"><span class="icon" aria-hidden="true">✓</span><span>Responsible disposal</span></div>
+        </div>
+      </div>
+
+      <!-- Quote Card (same structure as index) -->
+      <aside class="card" id="quote">
+        <div class="card-head">
+          <div>
+            <h2 class="card-title">Fast estimate</h2>
+            <p class="card-sub">Texting photos is the fastest way to get an exact price. We’ll confirm your total before we load anything.</p>
+          </div>
+          <div class="chip">Replies fast</div>
+        </div>
+
+        <!-- mailto placeholder — swap for Formspree/Web3Forms later -->
+        <form class="form" id="quoteForm" action="mailto:kuntzecleanouts@gmail.com" method="post" enctype="text/plain">
+          <div class="grid2">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="Name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" placeholder="Phone number" required />
+            </div>
+          </div>
+
+          <div class="mt12">
+            <label for="address">Service address</label>
+            <input id="address" name="Address" placeholder="Street, City" required />
+          </div>
+
+          <div class="mt12">
+            <label for="service">Service</label>
+            <select id="service" name="Service">
+              <option>Junk Removal</option>
+              <option>Garage Cleanout</option>
+              <option>Move-Out / Eviction</option>
+              <option>Yard Debris</option>
+              <option>Appliance / Furniture</option>
+              <option>Commercial Pickup</option>
+            </select>
+          </div>
+
+          <div class="grid2 mt12">
+            <div>
+              <label for="serviceDate">Service date</label>
+              <input type="date" id="serviceDate" name="Service Date" required />
+              <small class="form-hint">Minimum 3 days’ notice</small>
+            </div>
+
+            <div>
+              <label for="serviceTime">Service time</label>
+              <select id="serviceTime" name="Service Time" required>
+                <option value="" disabled selected>Choose a time</option>
+                <option>8:00 AM</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt12">
+            <label for="details">What needs hauled?</label>
+            <textarea id="details" name="Details" placeholder="Examples: couch + mattress, garage piles, yard branches, etc."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn solid" type="submit">Get My Upfront Quote</button>
+            <button class="btn ghost" type="button" id="textQuoteBtn">Text these details</button>
+          </div>
+
+          <p class="fine">Tip: Texting photos gets the fastest quote.</p>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Extra info -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>To get the fastest, most accurate quote</h2>
+        <p>Send 2–4 photos + your address + anything “special” (stairs, long carry, heavy items).</p>
+      </div>
+
+      <div class="cards">
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">📸</div>
+          <h3>Send photos</h3>
+          <p>Wide shot + close-ups. We’ll reply with an upfront estimate.</p>
+        </article>
+
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">📍</div>
+          <h3>Include your address</h3>
+          <p>Helps us confirm service area and timing.</p>
+        </article>
+
+        <article class="mini">
+          <div class="mini-icon" aria-hidden="true">🪜</div>
+          <h3>Call out access</h3>
+          <p>Stairs, narrow halls, or heavy items can affect the final total.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> Gateway Cleanouts • Licensed & insured • St. Louis Area</div>
+      <div class="footer-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#results">Results</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="quote.html">Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // "Text these details" button
+    (function () {
+      var btn = document.getElementById("textQuoteBtn");
+      if (!btn) return;
+
+      btn.addEventListener("click", function () {
+        var name = (document.getElementById("name") || {}).value || "";
+        var phone = (document.getElementById("phone") || {}).value || "";
+        var address = (document.getElementById("address") || {}).value || "";
+        var service = (document.getElementById("service") || {}).value || "";
+        var date = (document.getElementById("serviceDate") || {}).value || "";
+        var time = (document.getElementById("serviceTime") || {}).value || "";
+        var details = (document.getElementById("details") || {}).value || "";
+
+        var msg =
+          "Hi! I'd like a junk removal quote.\n" +
+          "Name: " + name + "\n" +
+          "Phone: " + phone + "\n" +
+          "Address: " + address + "\n" +
+          "Service: " + service + "\n" +
+          "Preferred: " + date + " @ " + time + "\n" +
+          "Details: " + details;
+
+        var url = "sms:+13146493059?&body=" + encodeURIComponent(msg);
+        window.location.href = url;
+      });
+    })();
+  </script>
+</body>
+</html>
