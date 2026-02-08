@@ -201,7 +201,7 @@ a{color:inherit}
   letter-spacing:-1px;
 }
 .sub{
-  color: var(--muted);
+  color: var(--brand2-light);
   font-size: 17px;
   margin:0 0 18px;
   max-width: 62ch;
