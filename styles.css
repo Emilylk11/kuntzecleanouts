@@ -921,4 +921,20 @@ input:focus, select:focus, textarea:focus{
     min-height: auto;
   }
 }
+/* Hero pricing card text override */
+.hero-side-card .card-title{
+  color: #0f172a !important;   /* dark slate */
+}
+
+/* Featured pill — compact version */
+.price-tile .pill-top{
+  font-size: 10px;
+  padding: 3px 7px;
+  white-space: nowrap;   /* force one line */
+  line-height: 1;
+}
+
+.price-tile.featured{
+  border: 1.5px solid rgba(30,90,168,.45);
+}
 
